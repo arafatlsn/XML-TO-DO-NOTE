@@ -1,0 +1,30 @@
+.main-section-left-container{
+  min-width: 35%;
+  height: 80vh;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
+
+.add-new-note-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-new-note-div button{
+  width: 90%;
+  margin-top: 1rem;
+  padding: .7rem 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: rgba(123, 203, 123, .7);
+  color: #375A37;
+  border-style: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.add-new-note-div button:hover{
+  background-color: rgb(123, 203, 123);
+}

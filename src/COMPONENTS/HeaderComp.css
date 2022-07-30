@@ -3,7 +3,12 @@
   background-color: #7BCB7B;
 }
 
+.navbar-main-div{
+  width: 60%;
+  margin: auto;
+}
+
 .navbar-main-div h1{
-  padding: .7rem 1rem;
+  padding: .7rem 0;
   color: #375A37;
 }

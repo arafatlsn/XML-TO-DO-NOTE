@@ -1,5 +1,13 @@
 .main-section-container{
-  height: 93vh;
+  min-height: 93vh;
   width: 100%;
-  background-color: #E9E9E9;
+  background-color: #D5E4D7;
+}
+
+.main-section-parent{
+  width: 60%;
+  margin: auto;
+  padding: 1rem 0;
+  display: flex;
+  gap: 2rem;
 }
