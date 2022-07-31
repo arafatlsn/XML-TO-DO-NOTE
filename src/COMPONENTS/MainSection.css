@@ -11,3 +11,17 @@
   display: flex;
   gap: 2rem;
 }
+
+@media screen and (max-width: 667px) {
+  .main-section-parent{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .main-section-parent{
+    margin: auto;
+    gap: 2rem;
+  }
+}

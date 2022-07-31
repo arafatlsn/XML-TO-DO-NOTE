@@ -12,3 +12,15 @@
   padding: .7rem 0;
   color: #375A37;
 }
+
+@media screen and (max-width: 667px) {
+  .navbar-main-div{
+    width: 98%;
+    margin: auto;
+  }
+  .navbar-main-div h1{
+    padding: .7rem 0;
+    color: #375A37;
+    font-size: 1.5rem;
+  }
+}

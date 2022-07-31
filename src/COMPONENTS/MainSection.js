@@ -61,6 +61,8 @@ const MainSection = () => {
           submitForm={submitForm}
           allNotes={allNotes}
           setNote={setNote}
+          reFetch={reFetch}
+          setReFetch={setReFetch}
         />
         <MainSectionRight submitForm={submitForm} note={noteObj} />
       </div>

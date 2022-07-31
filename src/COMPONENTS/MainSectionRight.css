@@ -25,6 +25,8 @@
   cursor: pointer;
   transition: background-color .3s;
   margin-right: .4rem;
+  display: flex;
+  align-items: center;
 }
 
 .save-button-div button:hover{
@@ -75,4 +77,33 @@
 
 .note-input:focus{
   outline: none;
+}
+
+.save-icon{
+  height: 1.3rem;
+  margin-right: .3rem;
+  margin-top: .3rem;
+}
+
+@media screen and (max-width: 667px) {
+  .main-section-right-container{
+    width: 96%;
+    margin: auto;
+    height: fit-content;
+    background-color: rgba(137, 226, 137, .5);
+    border-radius: .3rem;
+  }
+  .title-input{
+    width: 95%;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+  }
+  .note-input{
+    max-width: 95%;
+    padding: .8rem 1rem;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+  }
 }
