@@ -1,7 +1,7 @@
 .main-section-container{
   min-height: 93vh;
   width: 100%;
-  background-color: #D5E4D7;
+  background-color: rgba(137, 226, 137, .3);
 }
 
 .main-section-parent{

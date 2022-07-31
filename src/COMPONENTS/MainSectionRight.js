@@ -1,7 +1,7 @@
 import React from "react";
 import "./MainSectionRight.css";
 
-const MainSectionRight = ({ submitForm }) => {
+const MainSectionRight = ({ submitForm, note }) => {
   return (
     <div className="main-section-right-container">
       <div className="main-section-right-parent">
@@ -16,14 +16,14 @@ const MainSectionRight = ({ submitForm }) => {
               Title
             </label>{" "}
             <br />
-            <input type="text" name="title" className="title-input" required />
+            <input type="text" name="title" className="title-input" defaultValue={note?.title} required />
           </div>
           <div className="note-parent">
             <label htmlFor="note" className="note-text">
               Note
             </label>{" "}
             <br />
-            <textarea name="note" className="note-input" required></textarea>
+            <textarea name="note" defaultValue={`${note?.note ? note?.note : ''}`} className="note-input" required></textarea>
           </div>
         </form>
       </div>

@@ -1,7 +1,7 @@
 .main-section-right-container{
   width: 75%;
   height: fit-content;
-  background-color: #F5F5F5;
+  background-color: rgba(137, 226, 137, .5);
   border-radius: 1rem;
 }
 

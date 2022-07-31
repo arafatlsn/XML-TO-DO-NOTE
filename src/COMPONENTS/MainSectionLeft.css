@@ -1,8 +1,9 @@
 .main-section-left-container{
   min-width: 35%;
   height: 80vh;
-  background-color: whitesmoke;
+  background-color: rgba(137, 226, 137, .5);
   border-radius: 1rem;
+  overflow-y: scroll;
 }
 
 .add-new-note-div{
