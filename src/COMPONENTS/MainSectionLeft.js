@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MainSectionLeft.css";
 import SingleNote from "./SingleNote";
 
 const MainSectionLeft = ({ allNotes, setNote, reFetch, setReFetch }) => {
+  
+  const [active, setActive] = useState("")
   return (
     <div className="main-section-left-container">
       <div className="main-section-left-parent">
@@ -34,6 +36,8 @@ const MainSectionLeft = ({ allNotes, setNote, reFetch, setReFetch }) => {
               setNote={setNote}
               reFetch={reFetch}
               setReFetch={setReFetch}
+              active={active}
+              setActive={setActive}
             />
           ))}
         </div>

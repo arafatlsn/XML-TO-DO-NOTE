@@ -52,6 +52,10 @@ h3 {
   border-radius: 1rem;
 }
 
+.active{
+  border: 2px solid #375a37;
+}
+
 @media screen and (max-width: 667px) {
   .note-parent-heading h2 {
     font-size: 1.2rem;

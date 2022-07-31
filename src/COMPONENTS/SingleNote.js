@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SingleNote.css";
 
-const SingleNote = ({ note, setNote, reFetch, setReFetch }) => {
+const SingleNote = ({ note, setNote, reFetch, setReFetch, active, setActive }) => {
   const [showThreeDot, setShowThreeDot] = useState(true);
 
   const removeNote = () => {
@@ -37,7 +37,10 @@ const SingleNote = ({ note, setNote, reFetch, setReFetch }) => {
   };
 
   return (
-    <div onClick={() => setNote(note)} className="note-container-heading">
+    <div onClick={() => {
+      setNote(note)
+      setActive(note?._id)
+      }} className={`note-container-heading ${active === note?._id ? "active" : ""}`}>
       <div className="note-extra-container">
         <div className="note-parent-heading">
           <h2>
