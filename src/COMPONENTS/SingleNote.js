@@ -41,7 +41,7 @@ const SingleNote = ({ note, setNote, reFetch, setReFetch }) => {
       <div className="note-extra-container">
         <div className="note-parent-heading">
           <h2>
-            {note.title}{" "}
+            {note.title.length > 35 ? note.title.slice(0, 35) + '...' : note.title}{" "}
             {note.star && (
               <span onClick={() => addStar(false)}>
                 <svg
@@ -62,7 +62,7 @@ const SingleNote = ({ note, setNote, reFetch, setReFetch }) => {
               </span>
             )}
           </h2>
-          <h3>{note.note}</h3>
+          <h3>{note?.note?.length > 35 ? note?.note?.slice(0, 35) + '...' : note.note}</h3>
         </div>
         {showThreeDot ? (
           <div onClick={() => setShowThreeDot(false)}>

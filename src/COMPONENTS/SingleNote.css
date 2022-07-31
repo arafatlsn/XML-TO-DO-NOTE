@@ -23,8 +23,6 @@
 .note-parent-heading h2,
 h3 {
   color: #375a37;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .three-dot {
