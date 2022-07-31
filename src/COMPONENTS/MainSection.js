@@ -5,7 +5,7 @@ import MainSectionRight from "./MainSectionRight";
 
 const MainSection = () => {
   const [allNotes, setAllNotes] = useState([]);
-  const [note, setNote] = useState({});
+  const [noteObj, setNote] = useState({});
   const [reFetch, setReFetch] = useState(true);
 
   useEffect(() => {
@@ -14,12 +14,12 @@ const MainSection = () => {
       .then((data) => setAllNotes(data));
   }, [reFetch]);
 
-  const submitForm = (e, id) => {
+  const submitForm = (e) => {
     e.preventDefault();
     const title = e.target.title.value;
     const note = e.target.note.value;
 
-    if (!id) {
+    if (!noteObj?._id) {
       fetch("http://localhost:5000/addNote", {
         method: "POST",
         headers: {
@@ -35,7 +35,7 @@ const MainSection = () => {
           }
         });
     } else {
-      fetch("http://localhost:5000/updateNote", {
+      fetch(`http://localhost:5000/updateNote?id=${noteObj?._id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
@@ -52,7 +52,7 @@ const MainSection = () => {
     }
   };
 
-  console.log(note)
+  console.log(noteObj)
 
   return (
     <div className="main-section-container">
@@ -62,7 +62,7 @@ const MainSection = () => {
           allNotes={allNotes}
           setNote={setNote}
         />
-        <MainSectionRight submitForm={submitForm} note={note} />
+        <MainSectionRight submitForm={submitForm} note={noteObj} />
       </div>
     </div>
   );
