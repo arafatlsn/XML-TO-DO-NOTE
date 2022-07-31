@@ -9,7 +9,7 @@ const MainSection = () => {
   const [reFetch, setReFetch] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/loadNotes")
+    fetch("https://ancient-everglades-82869.herokuapp.com/loadNotes")
       .then((res) => res.json())
       .then((data) => setAllNotes(data));
   }, [reFetch]);
@@ -20,7 +20,7 @@ const MainSection = () => {
     const note = e.target.note.value;
 
     if (!noteObj?._id) {
-      fetch("http://localhost:5000/addNote", {
+      fetch("https://ancient-everglades-82869.herokuapp.com/addNote", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -31,28 +31,31 @@ const MainSection = () => {
         .then((data) => {
           if (data.insertedId) {
             setReFetch(!reFetch);
-            e.target.reset()
+            e.target.reset();
           }
         });
     } else {
-      fetch(`http://localhost:5000/updateNote?id=${noteObj?._id}`, {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({ title, note }),
-      })
+      fetch(
+        `https://ancient-everglades-82869.herokuapp.com/updateNote?id=${noteObj?._id}`,
+        {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify({ title, note }),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.modifiedCount) {
             setReFetch(!reFetch);
-            e.target.reset()
+            e.target.reset();
           }
         });
     }
   };
 
-  console.log(noteObj)
+  console.log(noteObj);
 
   return (
     <div className="main-section-container">
